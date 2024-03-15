@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react";
 import { Modal, StyleSheet, View, TouchableOpacity } from "react-native";
 import useTheme from "../hooks/useTheme";
+import Sizes from "../config/Sizes";
 
 interface Props {
   bottomSheetVisible: boolean;
@@ -57,8 +58,8 @@ const styles = StyleSheet.create({
     right: 5,
   },
   modalView: {
-    borderTopStartRadius: 20,
-    borderTopEndRadius: 20,
+    borderTopStartRadius: Sizes.md,
+    borderTopEndRadius: Sizes.md,
     width: "100%",
     bottom: 0,
     paddingTop: 20,

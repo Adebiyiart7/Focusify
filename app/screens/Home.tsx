@@ -14,7 +14,7 @@ const iconSize = 24;
 
 const Home = () => {
   const { colors } = useTheme();
-  const [bottomSheetVisible, setBottomSheetVisible] = useState(true);
+  const [bottomSheetVisible, setBottomSheetVisible] = useState(false);
 
   return (
     <Screen style={{ backgroundColor: colors.primary }}>
