@@ -1,6 +1,8 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import Home from "../screens/Home";
+import HomeScreen from "../screens/HomeScreen";
+import TabNavigator from "./TabNavigator";
+import Routes from "../config/Routes";
 
 const Stack = createStackNavigator();
 
@@ -19,8 +21,8 @@ const options = {
 const Navigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home" screenOptions={options}>
-        <Stack.Screen name="Home" component={Home} />
+      <Stack.Navigator initialRouteName={Routes.Home} screenOptions={options}>
+        <Stack.Screen name={Routes.Home} component={TabNavigator} />
       </Stack.Navigator>
     </NavigationContainer>
   );

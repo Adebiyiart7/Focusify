@@ -1,8 +1,11 @@
 export interface CustomTheme {
   colors: {
     background: string;
+    background200: string;
     border: string;
+    danger: string;
     gray: string;
+    lightText: string;
     mediumText: string;
     primary: string;
     text: string;
@@ -14,8 +17,11 @@ export interface CustomTheme {
 const LightTheme: CustomTheme = {
   colors: {
     background: "#fff",
+    background200: "#eee",
     border: "#ddd",
+    danger: "#b91c1c",
     gray: "gray",
+    lightText: "#9c9886",
     mediumText: "#676354",
     primary: "#ff6347",
     text: "#171100",
@@ -28,8 +34,11 @@ const LightTheme: CustomTheme = {
 const DarkTheme: CustomTheme = {
   colors: {
     background: "#fff",
+    background200: "#eee",
     border: "#ddd",
+    danger: "#b91c1c",
     gray: "gray",
+    lightText: "#9c9886",
     mediumText: "#676354",
     primary: "#ff6347",
     text: "#171100",

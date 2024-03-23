@@ -1,5 +1,12 @@
 import React, { ReactNode } from "react";
-import { Modal, StyleSheet, View, TouchableOpacity } from "react-native";
+import {
+  Modal,
+  StyleSheet,
+  View,
+  Pressable,
+  KeyboardAvoidingView,
+  Platform,
+} from "react-native";
 import useTheme from "../hooks/useTheme";
 import Sizes from "../config/Sizes";
 
@@ -25,17 +32,20 @@ const BottomSheet = React.memo(
           transparent={true}
           visible={bottomSheetVisible}
         >
-          <View style={[styles.centeredView, { backgroundColor: "#00000099" }]}>
-            <TouchableOpacity
+          <KeyboardAvoidingView
+            behavior={Platform.OS === "ios" ? "padding" : "height"}
+            style={[styles.centeredView, { backgroundColor: "#00000099" }]}
+          >
+            <Pressable
               onPress={() => setBottomSheetVisible(false)}
               style={styles.backdrop}
-            ></TouchableOpacity>
+            ></Pressable>
             <View
               style={[styles.modalView, { backgroundColor: colors.background }]}
             >
               {bottomSheetContent}
             </View>
-          </View>
+          </KeyboardAvoidingView>
         </Modal>
       </View>
     );
