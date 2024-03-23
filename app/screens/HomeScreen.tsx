@@ -18,7 +18,7 @@ const { width } = Dimensions.get("window");
 
 const HomeScreen = () => {
   const { colors } = useTheme();
-  const [bottomSheetVisible, setBottomSheetVisible] = useState(false);
+  const [bottomSheetVisible, setBottomSheetVisible] = useState(true);
 
   return (
     <Screen style={{ backgroundColor: colors.primary }}>
@@ -53,8 +53,8 @@ const HomeScreen = () => {
         />
         <View style={styles.circleContainer}>
           <TimerCircle />
-          <HomeFooter />
         </View>
+        <HomeFooter />
       </View>
     </Screen>
   );
@@ -71,11 +71,8 @@ const styles = StyleSheet.create({
     borderRadius: width,
   },
   circleContainer: {
-    backgroundColor: "red",
     position: "absolute",
     top: 100,
-    // height: "100%",
-    // justifyContent: "space-between",
   },
   container: {
     flex: 1,

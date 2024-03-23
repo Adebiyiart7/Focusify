@@ -3,6 +3,7 @@ export interface CustomTheme {
     background: string;
     background200: string;
     border: string;
+    border100: string;
     danger: string;
     gray: string;
     lightText: string;
@@ -19,6 +20,7 @@ const LightTheme: CustomTheme = {
     background: "#fff",
     background200: "#eee",
     border: "#ddd",
+    border100: "#eee",
     danger: "#b91c1c",
     gray: "gray",
     lightText: "#9c9886",
@@ -36,6 +38,7 @@ const DarkTheme: CustomTheme = {
     background: "#fff",
     background200: "#eee",
     border: "#ddd",
+    border100: "#eee",
     danger: "#b91c1c",
     gray: "gray",
     lightText: "#9c9886",

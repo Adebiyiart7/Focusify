@@ -1,13 +1,18 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleProp, StyleSheet, View, ViewStyle } from "react-native";
 
 import useTheme from "../hooks/useTheme";
 
-const Divider = React.memo(() => {
+const Divider = React.memo(({ style }: { style?: StyleProp<ViewStyle> }) => {
   const { colors } = useTheme();
 
   return (
-    <View style={{ borderBottomWidth: 1, borderBottomColor: colors.border }} />
+    <View
+      style={[
+        { borderBottomWidth: 1, borderBottomColor: colors.border },
+        style,
+      ]}
+    />
   );
 });
 

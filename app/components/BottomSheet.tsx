@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     width: "100%",
     bottom: 0,
     paddingTop: 20,
-    maxHeight: 500,
+    maxHeight: "80%",
   },
 
   modalText: {
