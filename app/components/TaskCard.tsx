@@ -8,6 +8,7 @@ import AppPressable from "./AppPressable";
 import useTheme from "../hooks/useTheme";
 import Sizes from "../config/Sizes";
 import Tag from "./Tag";
+import TaskCardFooter from "./TaskCardFooter";
 
 interface Props {
   task: Task;
@@ -54,6 +55,7 @@ const TaskCard = ({ task }: Props) => {
             contentContainerStyle={{ gap: 4, marginTop: 4 }}
             renderItem={({ item }) => <Tag tag={item} />}
           />
+          <TaskCardFooter />
         </View>
         <View style={styles.right}>
           <AppPressable onPress={() => {}}>
@@ -84,7 +86,7 @@ const styles = StyleSheet.create({
   left: {},
   right: {},
   title: {
-    fontWeight: "500",
+    fontWeight: "700",
     fontSize: Sizes.md,
     width: screenWidth - 125,
   },
